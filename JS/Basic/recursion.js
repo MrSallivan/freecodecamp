@@ -62,3 +62,24 @@ function randomRange(myMin, myMax) {
   return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin
   // Only change code above this line
 }
+//////////////////////////////////////countdown
+
+// Only change code below this line
+function countdown(n){
+  if (n < 1) {
+    return [];
+  } 
+    const countArray = countdown(n - 1);
+    countArray.unshift(n);
+    return countArray;
+  
+}
+// Only change code above this line
+
+////////////////////////////////////////
+function rangeOfNumbers(startNum, endNum) {
+  if(endNum < startNum) return []
+  let numbers = rangeOfNumbers(startNum, endNum - 1)
+  numbers.push(endNum)
+  return numbers
+};
